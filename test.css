@@ -1,0 +1,9 @@
+#div1 {
+
+    display: inline-block; 
+    width: 300px; height: 300px; 
+    border: 10px solid red; 
+    border-radius: 5px 25px 50% 55px; 
+    background-color: purple;
+
+}

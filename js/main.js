@@ -41,8 +41,20 @@ document.addEventListener("WeixinJSBridgeReady", function () {
 }, false);
 function playClicked(){
     if(audio_player.paused) {
-        audio_player.play();
-        $(".music").removeClass("off").addClass("on")
+		var playPromise = audio_player.play();
+
+		if (playPromise !== undefined) {
+			playPromise.then(_ => {
+			// Automatic playback started!
+			// Show playing UI.
+			$(".music").removeClass("off").addClass("on");
+			})
+			.catch(error => {
+			// Auto-play was prevented
+			// Show paused UI.
+			});
+		}
+        
     }else{
         audio_player.pause();
         $(".music").removeClass("on").addClass("off")

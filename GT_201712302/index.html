@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>绿装人 同心会</title>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="stylesheet" href="css/swiper-3.4.2.min.css"/>
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body style="background-color:#000;">
+
+<section class="load">
+	<div class="loading">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+		<p>Loading...<span id="load-progress">1</span>%</p>
+		<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+	</div>
+</section>
+
+<div class="music on" onclick="playClicked(this)"></div>
+<audio src="music.mp3" id="audio_player" loop=""></audio>
+
+<div class="swiper-container" id="page">
+	<div class="swiper-wrapper">
+        <div class="swiper-slide slide01">
+        	<p class="img01"><img src="img/img01.png" /></p>
+        	<p class="img02"><img src="img/img02.png" /></p>
+        	<p class="img03"><img src="img/img03.png" /></p>
+        	<p class="img04"><img src="img/img04.png" /></p>
+        	<p class="img05"><img src="img/img05.png" /></p>
+        	<p class="img06"><img src="img/img06.png" /></p>
+        </div>
+        <div class="swiper-slide slide02">
+        	<p class="img05"><img src="img/img11.png" /></p>
+        	<p class="img03"><img src="img/img09.png" /></p>
+        	<p class="img02"><img src="img/img08.png" /></p>
+        	<p class="img04"><img src="img/img10.png" /></p>
+        	<p class="img01"><img src="img/img07.png" /></p>
+        	<p class="img06"><img src="img/img12.png" /></p>
+        	<p class="img07"><img src="img/img13.png" /></p>
+        	<p class="img08"><img src="img/img14.png" /></p>
+        	<p class="img09"><img src="img/img15.png" /></p>
+        	<p class="img10"><img src="img/img16.png" /></p>
+        	<p class="img11"><img src="img/img17.png" /></p>
+        	<p class="img12"><img src="img/img18.png" /></p>
+        </div>
+        
+   </div>
+</div>
+
+<div class="resize">
+	<img src="img/web-swipe-tip.png" width="100%">
+</div>
+
+<div class="orienLayer"><div class="icons"></div> <div class="txt">竖屏效果最佳</div> </div>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+  window.wxShare && window.wxShare({
+      img     : "http://wx.bocweb.cn/dingmaoyan/GT_20171230/img/share.jpg",
+      linkurl : "http://wx.bocweb.cn/dingmaoyan/GT_20171230/",
+      desc    : "一月寿星礼，新青年，新气象！",
+      title   : "绿装人 同心会"
+  });
+})();
+</script>
+</body>
+</html>

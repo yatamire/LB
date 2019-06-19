@@ -10,6 +10,8 @@
 <meta content="email=no" name="format-detection">
 <link rel="stylesheet" href="css/swiper-3.4.2.min.css"/>
 <link rel="stylesheet" href="css/index.css" />
+
+
 </head>
 <body style="background-color:#000;">
 
@@ -32,7 +34,7 @@
 	<div class="swiper-wrapper">
         <div class="swiper-slide slide01">
 			<p class="img02"><img src="img/cake.png" /></p>
-        	<p class="img01"><img src="img/frog.png" /></p>
+        	<p class="img01"><img src="img/tMtWfVHxzn13UKnWHCv095iUV.png" /></p>
 			
 			<p class="img04"><img src="img/hb.png" /></p>
         </div>
@@ -54,18 +56,66 @@
 
 <script src="js/zepto.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script src="js/wxsdk.js"></script>
 <script src="js/main.js"></script>
 <script>
-(function(){
-  window.wxShare && window.wxShare({
-      img     : "",
-      linkurl : "",
-      desc    : "",
-      title   : ""
-  });
-})();
-</script>
+
+	$(document).on('pageinit', function(){
+			// music
+			document.addEventListener("WeixinJSBridgeReady", function () {
+					audio_player.play();
+			}, false);
+			function playClicked(){
+				if(audio_player.paused) {
+					var playPromise = audio_player.play();
+	
+					if (playPromise !== undefined) {
+						playPromise.then(_ => {
+						// Automatic playback started!
+						// Show playing UI.
+						$(".music").removeClass("off").addClass("on");
+						})
+						.catch(error => {
+						// Auto-play was prevented
+						// Show paused UI.
+						});
+					}
+					
+				}else{
+					audio_player.pause();
+					$(".music").removeClass("on").addClass("off")
+				}
+			}
+			playClicked();
+	});
+	$(document).ready(function() {
+		document.addEventListener("WeixinJSBridgeReady", function () {
+					audio_player.play();
+			}, false);
+			function playClicked(){
+				if(audio_player.paused) {
+					var playPromise = audio_player.play();
+	
+					if (playPromise !== undefined) {
+						playPromise.then(_ => {
+						// Automatic playback started!
+						// Show playing UI.
+						$(".music").removeClass("off").addClass("on");
+						})
+						.catch(error => {
+						// Auto-play was prevented
+						// Show paused UI.
+						});
+					}
+					
+				}else{
+					audio_player.pause();
+					$(".music").removeClass("on").addClass("off")
+				}
+			}
+
+			
+			playClicked();
+	});
+	</script>
 </body>
 </html>
